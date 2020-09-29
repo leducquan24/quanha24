@@ -1,34 +1,22 @@
 #include <stdio.h>
 int main(){
-	int n,i;
-	printf("n=");
+	int n;
+	printf("nhap n= ");
 	scanf("%d",&n);
 	int arr[n];
-	//
-	bool flag=false;
-//
 	for(int i=0;i<n;i++){
-		flag=true;
-		while(flag){
-			printf("nhap gia tri :");
-			scanf("%d",&arr[i]);
-			if(i==0) {
-				flag = false;
-			} else{								
-				for(int j=0;j<i;j++){
-					if(arr[j]==arr[i]){
-						printf("yeu cau nhap lai\n");
-						flag = true;
-						break;
-					}else {
-						flag = false;
-					}
+		bool flag;
+		int x;
+		// do{
+		flag = false;// reset gia tri kiem tra
+			printf("nhap gia tri arr[%d]=",i);
+			scanf("%d",&x);
+			// tim x trong mang tu 0 -> i-1
+			for(int j=0;j<i;i++){
+				if(arr[j]==x){
+					flag= true;
+					break;
 				}
 			}
 		}
-	}
-	printf("mang sau khi nhap :\n");		
-	for(int i=0;i<n;i++){
-		printf("%5d", arr[i]);
-	}
-}
+    }
